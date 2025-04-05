@@ -7,7 +7,7 @@ import { IoReceiptSharp } from "react-icons/io5";
 import { PiChefHat } from "react-icons/pi";
 const Services = () => {
   return (
-    <div className='w-full h-fit overflow-hidden  relative bg-black text-white'>
+    <div className='w-full h-fit overflow-hidden py-5  relative bg-black text-white'>
         <div className='flex flex-col gap-3  items-center'>
             <h1 className='font-albert-sans font-bold max-lg:text-2xl text-4xl'>Our Special Environment</h1>
             <div className='flex items-end text-[#FF0000] max-lg:text-sm font-bold gap-3 font-prata text-xl '><span className='w-20 max-lg:w-10 border-t'></span><span>Feast your eyes</span ><span className='w-20 max-lg:w-10 border-t'></span></div>
