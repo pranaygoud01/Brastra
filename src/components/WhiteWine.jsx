@@ -17,7 +17,7 @@ const WhiteWine = () => {
         
                 </div>
                 <div className='flex flex-col gap-2 items-center max-lg:py-2 py-5 '>
-                    <h1 className='text-xl max-lg:text-lg'>{item.name}</h1>
+                    <h1 className='text-xl max-lg:text-sm'>{item.name}</h1>
                     <p>€{item.price}</p>
                     </div>
         </div>

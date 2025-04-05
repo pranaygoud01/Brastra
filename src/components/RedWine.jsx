@@ -18,8 +18,8 @@ const RedWine = () => {
         
                 </div>
                 <div className='flex flex-col gap-2 max-lg:py-2 items-center py-5 '>
-                    <h1 className='text-xl max-lg:text-lg'>{item.name}</h1>
-                    <p>€{item.price}</p>
+                    <h1 className='text-xl max-lg:text-sm'>{item.name}</h1>
+                    <p className='max-lg:text-sm'>€{item.price}</p>
                     </div>
         </div>
        })}

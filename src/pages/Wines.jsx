@@ -70,7 +70,7 @@ const Wines = () => {
                     <button
                         key={index}
                         onClick={() => setActive(item.name)}
-                        className={`${active === item.name && "text-red-500"} font-semibold max-lg:text-xl cursor-pointer text-lg`}
+                        className={`${active === item.name && "text-red-500"} font-semibold max-lg:text-lg cursor-pointer text-lg`}
                     >
                         {item.name}<span className='max-lg:hidden'> Wines</span>
                     </button>
