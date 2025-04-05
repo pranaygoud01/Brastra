@@ -1,0 +1,33 @@
+@import "tailwindcss";
+/* Font utility classes */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-prata {
+  font-family: 'Prata', serif;
+}
+
+.font-albert-sans {
+  font-family: 'Albert Sans', sans-serif;
+}
+
+.font-aladin {
+  font-family: 'Aladin', cursive;
+}
+
+.font-instrument-sans {
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.font-playwrite {
+  font-family: 'Playwrite US Trad', sans-serif;
+}
+::-webkit-scrollbar{
+  width: 5px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: rgb(205, 7, 7);
+}
