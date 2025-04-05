@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       <div className='w-full text-white max-lg:items-center flex sticky z-20 top-0 items-center font-instrument-sans justify-between bg-black h-fit p-12 max-lg:py-3 max-lg:pl-0 max-lg:px-4 py-6'>
-        <img src={logo} className='h-[60px] max-lg:h-[50px] max-lg:w-[90px] w-[150px] max-lg:object-cover object-contain' />
+        <Link to="/"><img src={logo} className='h-[60px] max-lg:h-[50px] max-lg:w-[90px] w-[150px] max-lg:object-cover object-contain' /></Link>
 
         <nav className='flex gap-5 max-xl:hidden'>
           {menu.map((item, index) => {
