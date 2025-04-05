@@ -14,23 +14,23 @@ import RoseWine from '../components/RoseWine'
 
 const Wines = () => {
     const menus = [
-        { name: "Red Wines" },
-        { name: "White Wines" },
-        { name: "Sparkling Wines" },
-        { name: "Rose Wines" },
+        { name: "Red" },
+        { name: "White" },
+        { name: "Sparkling" },
+        { name: "Rose" },
     ]
 
-    const [active, setActive] = useState("Red Wines")
+    const [active, setActive] = useState("Red")
 
     const renderWineComponent = () => {
         switch (active) {
-            case "Red Wines":
+            case "Red":
                 return <RedWine />
-            case "White Wines":
+            case "White":
                 return <WhiteWine />
-            case "Sparkling Wines":
+            case "Sparkling":
                 return <SparklingWine />
-            case "Rose Wines":
+            case "Rose":
                 return <RoseWine />
             default:
                 return null
@@ -39,7 +39,7 @@ const Wines = () => {
 
     return (
         <div className='w-full bg-black text-white flex flex-col items-center h-fit'>
-            <div className='h-[100vh] flex justify-center flex-col gap-3 items-center relative w-full bg-center bg-no-repeat bg-cover'
+            <div className='h-[100vh] max-lg:h-[40vh] flex justify-center flex-col gap-3 items-center relative w-full bg-center bg-no-repeat bg-cover'
                 style={{ backgroundImage: `url(${Wine})` }}>
                 <div className='absolute h-full w-full grid grid-cols-3'>
                     <img src={design1} className='h-[60%] w-full' />
@@ -50,29 +50,29 @@ const Wines = () => {
                     <img src={design4} className='h-[60%] object-contain w-[50%]' />
                     <img src={design5} className='h-[50%] object-cover w-[20%]' />
                 </div>
-                <img src={logo} className='h-32 w-50 object-cover' />
-                <h1 className='font-aladin text-6xl font-semibold'>The Finest Wines</h1>
-                <p className='font-albert-sans text-center text-lg'>from Brastra Collection</p>
-                <a href="#wines" className='font-albert-sans text-sm cursor-pointer z-10 font-semibold px-4 py-2 bg-gradient-to-r from-[#D93564] via-[#8C2240] to-[#731C35]'>Explore</a>
+                <img src={logo} className='h-32 max-lg:h-20 max-lg:w-30 w-50 object-cover' />
+                <h1 className='font-aladin text-6xl max-lg:text-4xl font-semibold'>The Finest Wines</h1>
+                <p className='font-albert-sans text-center max-lg:text-sm text-lg'>from Brastra Collection</p>
+                <a href="#wines" className='font-albert-sans text-sm cursor-pointer z-10 max-lg:text-xs font-semibold px-4 py-2 bg-gradient-to-r from-[#D93564] via-[#8C2240] to-[#731C35]'>Explore</a>
             </div>
 
             <div id="wines" className='flex flex-col items-center gap-1 py-10'>
-                <h1 className='font-poppins font-semibold text-3xl'>Our Wines</h1>
-                <div className='flex gap-3 text-md text-red-500 items-center'>
+                <h1 className='font-poppins font-semibold max-lg:text-2xl text-3xl'>Our Wines</h1>
+                <div className='flex gap-3 text-md max-lg:text-sm text-red-500 items-center'>
                     <span className='w-10 border-t border-t-red-500'></span>
                     <FaWineGlass />
                     <span className='w-10 border-t border-t-red-500'></span>
                 </div>
             </div>
 
-            <div className='flex gap-16 font-albert-sans'>
+            <div className='flex gap-16 max-lg:gap-5 max-lg:px-5 font-albert-sans'>
                 {menus.map((item, index) => (
                     <button
                         key={index}
                         onClick={() => setActive(item.name)}
-                        className={`${active === item.name && "text-red-500"} font-semibold cursor-pointer text-lg`}
+                        className={`${active === item.name && "text-red-500"} font-semibold max-lg:text-xl cursor-pointer text-lg`}
                     >
-                        {item.name}
+                        {item.name}<span className='max-lg:hidden'> Wines</span>
                     </button>
                 ))}
             </div>

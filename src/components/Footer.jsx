@@ -4,22 +4,24 @@ import { IoLogoFacebook } from "react-icons/io5";
 import { RiInstagramFill } from "react-icons/ri";
 const Footer = () => {
   return (
-    <div className='w-full flex flex-col font-instrument-sans text-white font px-32 py-10 h-[350px] bg-black'>
-        <div className='border-b flex justify-between items-center border-b-white '>
-           <div className='flex flex-col gap-2 items-center pb-10'><img src={logo} className='h-30 w-40 object-center '/>
+    <div className='w-full flex flex-col max-lg:h-fit max-lg:p-5 font-instrument-sans text-white font px-32 py-10 h-[350px] bg-black'>
+        <div className='border-b flex max-lg:flex-col justify-between items-center max-lg:pb-5 max-lg:items-start border-b-white '>
+           <div className='flex flex-col  max-lg:flex-row max-lg:justify-between max-lg:w-full max-lg:text-sm gap-2 items-center max-lg:items-center max-lg:pb-4 pb-10'><img src={logo} className='h-30 max-lg:h-20 max-lg:w-30  w-40 object-cover '/>
+           <div className='flex flex-col gap-2'>
            <p>Phone number</p>
            <p>+34 911 72 07 45</p>
            </div>
-           <ul className='flex text-lg pr-4 gap-5'>
+           </div>
+           <ul className='flex max-lg:text-sm max-lg:w-full  text-lg max-lg:justify-between max-lg:pr-0 pr-4 gap-5'>
             <li>Home</li>
             <li>Menu</li>
             <li>Wines</li>
             <li>Christmas Dinner</li>
            </ul>
         </div>
-        <div className='flex justify-between items-center py-10'>
-        <p>copyright &copy; 2025 Brastra</p>
-        <div className='flex gap-3 text-4xl'>
+        <div className='flex justify-between max-lg:py-5 items-center py-10'>
+        <p className='max-lg:text-xs'>copyright &copy; 2025 Brastra</p>
+        <div className='flex max-lg:text-xl gap-3 text-4xl'>
             <IoLogoFacebook/>
             <RiInstagramFill/>
         </div>

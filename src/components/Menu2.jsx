@@ -4,9 +4,9 @@ import { PiBowlFood } from "react-icons/pi";
 const Menu2 = ({menu,title,image}) => {
    
   return (
-    <div className='w-full px-[48px] justify-between max-lg:gap-10 py-10 h-fit flex '>
+    <div className='w-full px-[48px] max-lg:flex-col-reverse max-lg:p-5  justify-between max-lg:gap-10 py-10 h-fit flex '>
       
-      <div className='w-[65%] pl-16 max-xl:pl-0  flex flex-col items-center'>
+      <div className='w-[65%] max-lg:w-full  pl-16 max-xl:pl-0  flex flex-col items-center'>
          
     <div className="flex font-albert-sans items-center space-x-2">
         
@@ -16,7 +16,7 @@ const Menu2 = ({menu,title,image}) => {
             
         </div>
 
-        <h1 className="text-white text-3xl font-bold">{title}</h1>
+        <h1 className="text-white text-3xl max-lg:text-[22px] font-bold">{title}</h1>
 
         
         <div className="flex items-center">
@@ -28,7 +28,7 @@ const Menu2 = ({menu,title,image}) => {
          <div className='flex flex-col font-poppins gap-2 w-full mt-3'>
             {menu.map((item,index)=>{
                 return <div key={index} className="flex items-center justify-between bg-black text-white p-4 w-full ">
-                {/* Image */}
+          
                 <div className="w-16 h-16">
                   <img
                     src={item.image}
@@ -38,17 +38,17 @@ const Menu2 = ({menu,title,image}) => {
                 </div>
           
                 
-                <div className="flex-1 px-4">
+                <div className="flex-1 px-4 max-lg:px-3">
                   <div className="flex items-center gap-2">
-                    <h2 className="text-lg  uppercase">{item.name}</h2>
+                    <h2 className="text-lg max-lg:text-sm  uppercase">{item.name}</h2>
                     <span className=""><PiBowlFood/></span> 
                     
                 <div className="flex-1 border-dotted border-b border-gray-500"></div>
           
                 
-          <div className="text-lg ">{item.price}</div>
+          <div className="text-lg max-lg:text-sm ">{item.price}</div>
                   </div>
-                  <p className="text-xs text-gray-400">
+                  <p className="text-xs max-lg:text-[10px] text-gray-400">
                    {item.des}
                   </p>
                 </div>
@@ -56,7 +56,7 @@ const Menu2 = ({menu,title,image}) => {
             })}
             </div>
       </div>
-      <div className='w-[35%] h-[400px]'>
+      <div className='w-[35%] max-lg:w-full h-[400px]'>
          <img src={image} className='w-full h-full object-contain'/>
       </div>
     </div>

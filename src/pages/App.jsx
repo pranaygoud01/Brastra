@@ -7,7 +7,6 @@ import Events from "../components/Events"
 const App = () => {
   return (
     <>
-   
     <Hero/>
     <About/>
     <Food/>

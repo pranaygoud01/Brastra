@@ -38,10 +38,10 @@ const Menu = () => {
     const [active,SetActive]=useState("BreakFast")
   return (
     <div className='w-full  text-white h-fit  flex flex-col items-center gap-6  py-10 bg-black'>
-             <div className='flex flex-col items-center gap-1'> <h1 className='font-poppins font-semibold text-3xl'>Menu</h1>
-               <div className='flex gap-3 text-md text-red-500 items-center'><span className='w-8 border-t border-t-red-500'></span><PiBowlFood/><span  className='w-8 border-t border-t-red-500'></span></div>
+             <div className='flex flex-col items-center gap-1'> <h1 className='font-poppins font-semibold max-lg:text-2xl text-3xl'>Menu</h1>
+               <div className='flex gap-3 text-md max-lg:text-sm text-red-500 items-center'><span className='w-8 border-t border-t-red-500'></span><PiBowlFood/><span  className='w-8 border-t border-t-red-500'></span></div>
                </div>
-               <div className='flex gap-16 font-albert-sans'>
+               <div className='flex gap-16 max-lg:gap-6 font-albert-sans'>
                {menus.map((item,index)=>{
                 return <button key={index} className={`${active===item.name&& "text-red-500"} font-semibold cursor-pointer text-lg`}>{item.name}</button>
                })}
