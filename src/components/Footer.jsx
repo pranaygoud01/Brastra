@@ -2,6 +2,7 @@ import React from 'react'
 import logo from "../assets/logo1.png"
 import { IoLogoFacebook } from "react-icons/io5";
 import { RiInstagramFill } from "react-icons/ri";
+import { Link } from '@tanstack/react-router';
 const Footer = () => {
   return (
     <div className='w-full flex flex-col max-lg:h-fit max-lg:p-5 font-instrument-sans text-white font px-32 py-10 h-[350px] bg-black'>
@@ -13,10 +14,10 @@ const Footer = () => {
            </div>
            </div>
            <ul className='flex max-lg:text-sm max-lg:w-full  text-lg max-lg:justify-between max-lg:pr-0 pr-4 gap-5'>
-            <li>Home</li>
-            <li>Menu</li>
-            <li>Wines</li>
-            <li>Christmas Dinner</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/wines">Wines</Link></li>
+            <li><Link to="/">Christmas Dinner</Link></li>
            </ul>
         </div>
         <div className='flex justify-between max-lg:py-5 items-center py-10'>
