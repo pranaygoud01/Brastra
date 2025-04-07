@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiSearch } from "react-icons/fi";
 import { Link, useRouter } from '@tanstack/react-router';
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from 'framer-motion';
@@ -13,7 +13,7 @@ const NavBar = () => {
   const menu = [
     { name: "Home", path: "/" },
     { name: "Restaurant Menu", path: "/menu" },
-    { name: "Wines", path: "/wines" },
+    
   ];
 
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <>
       <div className='w-full text-white max-lg:items-center flex sticky z-20 top-0 items-center font-instrument-sans justify-between bg-black h-fit p-12 max-lg:py-3 max-lg:pl-0 max-lg:px-4 py-6'>
-        <Link to="/"><img src={logo} className='h-[60px] max-lg:h-[50px] max-lg:w-[90px] w-[150px] max-lg:object-cover object-contain' /></Link>
+        <Link to="/"><img src={logo} className='h-[70px] max-lg:h-[40px] max-lg:pl-3 max-lg:pt-1 max-lg:w-[90px] w-[180px] max-lg:object-cover object-cover' /></Link>
 
         <nav className='flex gap-5 max-xl:hidden'>
           {menu.map((item, index) => {

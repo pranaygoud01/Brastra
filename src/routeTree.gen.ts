@@ -11,17 +11,10 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as WinesImport } from './routes/wines'
 import { Route as MenuImport } from './routes/menu'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
-
-const WinesRoute = WinesImport.update({
-  id: '/wines',
-  path: '/wines',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const MenuRoute = MenuImport.update({
   id: '/menu',
@@ -53,13 +46,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuImport
       parentRoute: typeof rootRoute
     }
-    '/wines': {
-      id: '/wines'
-      path: '/wines'
-      fullPath: '/wines'
-      preLoaderRoute: typeof WinesImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -68,41 +54,36 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/menu': typeof MenuRoute
-  '/wines': typeof WinesRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/menu': typeof MenuRoute
-  '/wines': typeof WinesRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/menu': typeof MenuRoute
-  '/wines': typeof WinesRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/menu' | '/wines'
+  fullPaths: '/' | '/menu'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/menu' | '/wines'
-  id: '__root__' | '/' | '/menu' | '/wines'
+  to: '/' | '/menu'
+  id: '__root__' | '/' | '/menu'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   MenuRoute: typeof MenuRoute
-  WinesRoute: typeof WinesRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   MenuRoute: MenuRoute,
-  WinesRoute: WinesRoute,
 }
 
 export const routeTree = rootRoute
@@ -116,8 +97,7 @@ export const routeTree = rootRoute
       "filePath": "__root.jsx",
       "children": [
         "/",
-        "/menu",
-        "/wines"
+        "/menu"
       ]
     },
     "/": {
@@ -125,9 +105,6 @@ export const routeTree = rootRoute
     },
     "/menu": {
       "filePath": "menu.jsx"
-    },
-    "/wines": {
-      "filePath": "wines.jsx"
     }
   }
 }

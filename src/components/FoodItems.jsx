@@ -3,6 +3,7 @@ import food2 from "../assets/food2.png"
 import food3 from "../assets/food3.png"
 import food4 from "../assets/food4.png"
 import food5 from "../assets/food5.png"
+import { Link } from '@tanstack/react-router'
 const FoodItems = () => {
     const items=[
         {name:"Patatas Bravas",image:food2,price:"5.00"},
@@ -19,7 +20,7 @@ const FoodItems = () => {
             <div className='flex flex-col py-4 items-center max-lg:gap-2 gap-3'>
                 <p className='uppercase text-xl max-lg:text-sm'>{item.name}</p>
                 <p className='font-semibold max-lg:text-sm text-red-500'>${item.price}</p>
-                <button className='px-8 py-2 rounded-md max-lg:px-6 max-lg:text-xs bg-red-500 border-t-2 border-t-[#D22020] font-semibold'>View</button>
+                <Link to="/menu" className='px-8 py-2 rounded-md max-lg:px-6 max-lg:text-xs bg-red-500 border-t-2 border-t-[#D22020] font-semibold'>View</Link>
                 </div>
             </div>
        })}

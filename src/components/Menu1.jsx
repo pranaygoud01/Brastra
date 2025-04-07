@@ -4,10 +4,10 @@ import { PiBowlFood } from "react-icons/pi";
 const Menu1 = ({menu,title,image}) => {
     
   return (
-    <div className='w-full px-[48px] max-lg:p-5 max-lg:flex-col justify-between max-xl:gap-10 py-10 h-fit flex '>
-      <div className='w-[35%] max-lg:w-full h-[400px]'>
-         <img src={image} className='w-full h-full object-contain'/>
-      </div>
+    <div className='w-full px-[48px] relative max-lg:p-5 max-lg:flex-col max-lg:px-1 justify-between max-xl:gap-10 py-10 h-fit flex '>
+       <div className='w-[35%] flex justify-center sticky top-24 max-lg:static  max-lg:w-full max-lg:h-[200px] h-[400px] self-start'>
+    <img src={image} className='w-9/12 h-full object-cover' />
+  </div>
       <div className='w-[65%] max-lg:w-full  flex flex-col pr-16  max-xl:pr-0 items-center'>
          
     <div className="flex font-albert-sans items-center space-x-2">
@@ -29,7 +29,7 @@ const Menu1 = ({menu,title,image}) => {
     </div>
          <div className='flex flex-col font-poppins gap-2 w-full mt-3'>
             {menu.map((item,index)=>{
-                return <div key={index} className="flex items-center justify-between bg-black text-white p-4 w-full ">
+                return <div key={index} className="flex items-center justify-between bg-black text-white p-3 w-full ">
                
                 <div className="w-16 h-16">
                   <img
@@ -48,7 +48,7 @@ const Menu1 = ({menu,title,image}) => {
                 <div className="flex-1 border-dotted border-b border-gray-500"></div>
           
                 
-          <div className="text-lg max-lg:text-sm ">{item.price}</div>
+          <div className="text-lg max-lg:text-sm ">£{item.price}</div>
                   </div>
                   <p className="text-xs max-lg max-lg:pt-1 text-[10px] text-gray-400">
                    {item.des}

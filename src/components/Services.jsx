@@ -17,7 +17,7 @@ const Services = () => {
             <img src={food6} className='h-[400px] max-lg:hidden w-[16%] max-lg:w-full object-cover'/>
             <div className='w-full flex justify-end py-10 pr-72 max-lg:p-4 h-full max-lg:static absolute'>
                 <div className='bg-white/12 max-lg:w-full h-full flex flex-col py-8 items-center gap-2 w-4/12 rounded-xl'>
-                     <img src={logo1} className='w-30 max-lg:h-20 h-30 object-cover'/>
+                     <img src={logo1} className='w-46 max-lg:h-20 h-20 mb-10 object-cover'/>
                      <SiCodefresh className='text-5xl max-lg:text-4xl text-red-500'/>
                      <p className='font-bold font-albert-sans max-lg:text-xl text-xl'>Fresh Products</p>
                      <p className='text-xs w-9/12 max-lg:text-sm text-center text-neutral-400'>These nutrients support everything from immune function to bone health.</p>
