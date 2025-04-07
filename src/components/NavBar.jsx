@@ -56,7 +56,7 @@ const NavBar = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className='w-full lg:hidden font-albert-sans flex flex-col px-5 py-10 bg-black text-white fixed top-18 h-[100vh] border-t border-t-white/70 z-30'
+            className='w-full lg:hidden font-albert-sans flex flex-col px-5 py-10 bg-black text-white fixed top-16 h-[100vh] border-t border-t-white/70 z-30'
           >
             <div className='flex flex-col items-start gap-7 text-2xl font-semibold'>
               {menu.map((item, index) => (
